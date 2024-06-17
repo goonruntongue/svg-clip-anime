@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    background: #333333;
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", "Zen Kaku Gothic New", sans-serif;
+}
+
+input[type="file"] {
+    cursor: pointer;
+}
+
+.explain,
+.controller {
+    width: min(960px, 96vw);
+    margin: 0 auto;
+}
+
+.controller {
+    border: 2px solid #e4e4e4;
+    padding: 0.5em 1.5em;
+    border-radius: 12px;
+    margin-bottom: 4em;
+}
+
+.controller p::before {
+    /* display: inline-block; */
+    font-family: "FontAwesome";
+    content: "\f54b";
+    color: #757575;
+    background: #ffffff;
+    /* transform: rotate(270deg); */
+    width: 32px;
+    height: 32px;
+    font-size: 0.8em;
+    /* margin-right: 0.5em; */
+    /* vertical-align: middle; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-right: 0.8em;
+    float: left;
+    transform: rotate(270deg) translateY(calc(50% - 16px));
+}
+
+.controller p {
+    /* display: flex; */
+    gap: 0.5em;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+p::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.controller p:not(.controller > p:first-of-type) {
+    margin-top: 3em;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    position: relative;
+    padding: 0.5em 0;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    bottom: 0;
+    position: absolute;
+}
+
+h1::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    top: 0;
+    position: absolute;
+}
+
+.sample {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+}
+
+a.blobmaker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    vertical-align: text-bottom;
+    color: coral;
+}
+
+a.blobmaker img {
+    height: 1.5em;
+}
+
+.steps p {
+    min-height: 7em;
+    padding-left: 2.2em;
+    position: relative;
+    counter-increment: cnt;
+}
+
+.steps p:not(:first-of-type) {
+    display: flex;
+    align-items: center;
+}
+
+.steps p::before {
+    content: counter(cnt);
+    position: absolute;
+    left: 0;
+    background: #e4e4e4;
+    color: #222;
+    font-weight: bold;
+    min-width: 1.5em;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0, 50% calc(1.5vw), 100% 0, 100% calc(100% - 1.5vw), 50% 100%, 0% calc(100% - 1.5vw));
+}
+
+.steps p:first-of-type::before {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1.5vw), 50% 100%, 0 calc(100% - 1.5vw));
+}
+
+strong {
+    font-size: 0.9em;
+}
+
+.steps {
+    padding: 0.5em 1.5em;
+    border: 2px solid #e4e4e4;
+    border-radius: 12px;
+    margin-bottom: 2.5em;
+}
+
+.duration span:nth-of-type(2) {
+    background: white;
+    color: #000;
+    padding: 0 1em;
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 2px 2px #3c3838;
+}
+
+p.ta-center {
+    text-align: center;
+}
+
+@media(max-width:768px) {
+    p.ta-center {
+        text-align: justify;
+        width: 90vw;
+        margin: 0.5em auto;
+    }
+}
+
+h1 span:nth-of-type(2),
+h1 span:nth-of-type(6) {
+    color: coral;
+}
+
+input {
+    cursor: pointer;
+}
+
+.fill small {
+    font-size: 0.8rem;
+}
+
+.fill span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+img.footer-logo {
+    width: 1em;
+}
+
+footer small {
+    display: block;
+    width: 90vw;
+    margin: 2em auto;
+    text-align: center;
+}
